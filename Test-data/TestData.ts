@@ -17,5 +17,12 @@ export const ValidUsers = {
         username: 'Thapelosegwe11',
         password: '********'
         
+    },
+
+    InvalidCredentials:{
+        username: 'invalidUsername',
+        password: 'invalidPassword'
     }
+
 }
+

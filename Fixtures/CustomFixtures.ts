@@ -2,23 +2,30 @@ import { test as base } from '@playwright/test';
 import { HomePage,} from '../Pages/HomePage';
 import { LoginPage } from '../Pages/LoginPage';
 import { DashboardPage } from '../Pages/DashboardPage';
+import { ProfilePage } from '../Pages/ProfilePage';
+
+
 
 type CustomFixtures = {
 
     homePage : HomePage;
     loginPage : LoginPage;
     dashboardPage : DashboardPage;
+    profilePage : ProfilePage;
 }
 
 export const test = base.extend<CustomFixtures> ({
 
-    homePage: async ({ page }, use) => {
-        await use (new HomePage (page));
+    homePage: async ({page}, use) => {
+        await use (new HomePage(page) );
     },
-    loginPage: async ({ page }, use) =>{
-        await use (new LoginPage (page));
+    loginPage: async ({page}, use) =>{
+        await use (new LoginPage(page) );
     },
-    dashboardPage: async ({ page }, use) => {
-        await use (new DashboardPage (page));
+    dashboardPage: async ({page}, use) => {
+        await use (new DashboardPage(page) );
+    },
+    profilePage: async ({page}, use) => {
+        await use(new ProfilePage(page) );
     }
 })

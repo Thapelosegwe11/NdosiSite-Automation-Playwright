@@ -5,12 +5,11 @@ test.beforeEach( async ({page}) => {
     
     await page.goto('/');
 
-    await page.getByRole('button', {name: 'Login'}).click();
-    
-});
+    //await page.getByRole('button', {name: 'Login'}).click();
+    });
 
 
-test.describe('positive tests', () => {
+test.describe('positive login tests', () => {
     
 
 test('login with valid credentials test', async ({page}, testInfo) => {
